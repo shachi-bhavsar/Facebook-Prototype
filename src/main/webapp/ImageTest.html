@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Image Test</title>
+	<script src="RequiredOfflineFiles/jquery.js"></script>
+	<script src="RequiredOfflineFiles/jquery.min.js"></script>
+	<script src="RequiredOfflineFiles/bootstrap.min.js"></script>
+	<script src="JavaScriptFiles/ImageTest.js"></script>
+	<link rel="stylesheet" href="RequiredOfflineFiles/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="RequiredOfflineFiles/bootstrap.min.css">
+</head>
+<body style="background-color:#4A777A">
+
+	<div class="col-md-5 col-md-offset-1" style="margin-top:100px">
+		<form class="form-horizontal" style="display:block;background-color:#B3CFD1	; border-style: solid;border-radius:5px;border-width:5px;border-color:white;border-width: 5px;" id="myImageForm" onsubmit="">
+			<a href="#picturemodal" data-toggle="modal"><img id="sampleImage" src="" class="img-thumbnail" style="display: block;margin: 0 auto;margin-bottom:20px;margin-top:20px; width:80%;height:80%" ></a>
+		<div class="form-group">
+			
+			<div class="col-sm-offset-1 col-sm-9" style="margin-left:75px">
+				<input type="text" class="form-control" id="name" placeholder="Enter your name">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-1 col-sm-9" style="margin-left:75px">
+				<input type="text" class="form-control" id="mobile" placeholder="Enter your mobile number">
+			</div>
+		</div>		
+		<div class="form-group">
+			<div class="col-sm-offset-8">
+				<button type="submit" class="btn btn-sm btn-primary">Save Changes</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	
+	
+	<!-- Code For Modal -->
+	<div id="picturemodal"  class="modal fade">
+		<div class="modal-dialog">
+			<form class="form" role="form" method="post" onsubmit="changeImage()" accept-charset="UTF-8" id="modalForm" enctype="multipart/form-data">
+				<div class="modal-content">
+					<div class="modal-body" style="overflow-y: scroll; height: 400px">
+						<div class="form-group">
+							<label class="col-md-3 control-label" for="name">Select Image:</label>
+							<div class="col-md-9">
+								<input type="file" name="uploadFile" size="100" onchange="changeModalImage(this)" />
+							</div>
+							<div style="margin-left: 150px">
+								<br/><br/> <img id="modalImage" class="img-rounded" width="300" height="236" />
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" id="pictureSubmitButton" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Modal Ends Here -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
